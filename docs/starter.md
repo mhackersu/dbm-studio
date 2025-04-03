@@ -1,4 +1,20 @@
-# DBM Studio
+# Next.js SaaS Starter
+
+This is a starter template for building a SaaS application using **Next.js** with support for authentication, Stripe integration for payments, and a dashboard for logged-in users.
+
+**Demo: [https://next-saas-start.vercel.app/](https://next-saas-start.vercel.app/)**
+
+## Features
+
+- Marketing landing page (`/`) with animated Terminal element
+- Pricing page (`/pricing`) which connects to Stripe Checkout
+- Dashboard pages with CRUD operations on users/teams
+- Basic RBAC with Owner and Member roles
+- Subscription management with Stripe Customer Portal
+- Email/password authentication with JWTs stored to cookies
+- Global middleware to protect logged-in routes
+- Local middleware to protect Server Actions or validate Zod schemas
+- Activity logging system for any user events
 
 ## Tech Stack
 
@@ -11,6 +27,8 @@
 ## Getting Started
 
 ```bash
+git clone https://github.com/nextjs/saas-starter
+cd saas-starter
 pnpm install
 ```
 
@@ -82,3 +100,12 @@ In your Vercel project settings (or during deployment), add all the necessary en
 2. `STRIPE_SECRET_KEY`: Use your Stripe secret key for the production environment.
 3. `STRIPE_WEBHOOK_SECRET`: Use the webhook secret from the production webhook you created in step 1.
 4. `POSTGRES_URL`: Set this to your production database URL.
+5. `AUTH_SECRET`: Set this to a random string. `openssl rand -base64 32` will generate one.
+
+## Other Templates
+
+While this template is intentionally minimal and to be used as a learning resource, there are other paid versions in the community which are more full-featured:
+
+- https://achromatic.dev
+- https://shipfa.st
+- https://makerkit.dev
