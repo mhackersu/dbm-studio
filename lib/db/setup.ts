@@ -137,7 +137,7 @@ volumes:
 
   console.log('Starting Docker container with `docker compose up -d`...');
   try {
-    await execAsync('docker compose up -d');
+    await execAsync('sudo docker compose up -d');
     console.log('Docker container started successfully.');
   } catch (error) {
     console.error(
